@@ -4,19 +4,19 @@ local on = false
 
 local function toggle()
 
-	on = !on
+	view = !view
 
-	if on == true then
+	if view == true then
 
 		print( 'enabled' )
 		
-		LocalPlayer():PrintMessage( HUD_PRINTTALK, "Third person mode enabled." )
+		LocalPlayer():PrintMessage( HUD_PRINTTALK, "Enabled." )
 
 	else
 
 		print( 'disabled')
 		
-		LocalPlayer():PrintMessage( HUD_PRINTTALK, "Third person mode disabled." )
+		LocalPlayer():PrintMessage( HUD_PRINTTALK, "Disabled." )
 
 	end
 
@@ -54,13 +54,13 @@ end
 
 if ( SERVER ) then
 
-function ulx.thirdperson( calling_ply )
+function ulx.3p( calling_ply )
 
 	calling_ply:SendLua([[RunConsoleCommand("thirdperson_toggle")]])	
 
 end
-local thirdperson = ulx.command( "Utility", "ulx thirdperson", ulx.thirdperson, {"!3p"}, true )
+local thirdperson = ulx.command( "Utility", "ulx 3p", ulx.3p, {"!3p"}, true )
 thirdperson:defaultAccess( ULib.ACCESS_ALL )
-thirdperson:help( "Toggles third person mode" )
+thirdperson:help( "Sets a view in thirdperson to see yourself." )
 
 end
