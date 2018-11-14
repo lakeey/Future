@@ -59,7 +59,7 @@ function ulx.thirdperson( calling_ply )
 	calling_ply:SendLua([[RunConsoleCommand("thirdperson_toggle")]])	
 
 end
-local thirdperson = ulx.command( "Utility", "ulx thirdperson", ulx.thirdperson, {"!3p"}, true )
+local thirdperson = ulx.command( "Utility", "ulx thirdperson", ulx.thirdperson, {"!thirdperson"}, true )
 thirdperson:defaultAccess( ULib.ACCESS_ALL )
 thirdperson:help( "Toggles third person mode" )
 
