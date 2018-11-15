@@ -1,6 +1,6 @@
-function NoSuicide( ply )
-	ply:PrintMessage( HUD_PRINTTALK, "Suicide has been disabled, contact an online admin for support if needed.")
-	return false
+local function BlockSuicide(ply)
+    ply:ChatPrint("It's not worth it, suicide is not the answer. Use @ and a staff member can cure your depression.")
+    return false
 end
 
-hook.Add( "CanPlayerSuicide", "Suicide", NoSuicide )
+hook.Add( "CanPlayerSuicide", "BlockSuicide", BlockSuicide )
