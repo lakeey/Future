@@ -1,1 +1,1 @@
-The listed files all go into your server folder. Which is located in, garrysmod/lua/autorun/server. Drag and drop all .lua files in there. If there are any containing lua errors please, contact me at, melvindjackson@live.com. If I should add any lua scripts to the list please email me at, melvindjackson@live.com.
+Working on projects in the future to release to the public. If you have any business inquires just email me at melvindjackson@live.com I'm fairly active when it comes to receiving emails.
